@@ -3,8 +3,6 @@ import sys
 from io import StringIO
 from random import randint
 
-#############GENERATED CODE PRINTS RESULT, DOES NOT RETURN RESULT#############
-
 class Stack(object):
 	def __init__(self):
 		self.items = []
@@ -64,6 +62,7 @@ class CodeFileGenerator(object):
 		self.newVariableMade = True
 		self.debugNames = []
 		self.batchNumber = 0
+		self.makeResultsFile = False
 
 	def makeDebugFile(self, filename, content):
 		if filename in self.debugNames:
@@ -229,6 +228,7 @@ class CodeFileGenerator(object):
 
 	
 	def beginBatchRun(self, batchSize = 0, given_input = 0, desired_output = 1, max_lines = 25, min_scope = 1, max_scope = 5, tab = '\t', newline = '\n', makeResultsFile = False):
+		self.makeResultsFile = makeResultsFile
 		if batchSize > 50000:
 			print('Batch size too large!')
 			return 'Batch size too large!'
@@ -317,7 +317,7 @@ class CodeFileGenerator(object):
 				result = str(output) + ' False, != desired output\t' + str(index) + self.NEWLINE #\
                                          #+ str(self.STARTING_STRING + self.fileString + self.ENDING_STRING)
 				batchResults += '\n'+result
-		if makeResultsFile:
+		if self.makeResultsFile:
 			for i in range(0, 9999):
 				try:
 					with open('batchResults'+str(i)+'.txt', 'r'):
@@ -328,6 +328,9 @@ class CodeFileGenerator(object):
 						br.write(batchResults)
 					batchResults = 'Detailed results in \'batchResults'+str(i)+'.txt\'\n'+str(batchSuccessOnly)
 					break
+				
+			print(str(batchResults))
+			return str(batchResults)
 		else:
 			print(str(batchSuccessOnly))
 			return str(batchSuccessOnly)
