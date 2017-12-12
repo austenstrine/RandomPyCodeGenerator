@@ -23,4 +23,4 @@ A program that randomly generates Python code, and then filters based on the des
   
   I initially was concerned about the scalability - I couldn't figure out how to get all the processing done in RAM instead of on the disk, but when I discovered that I could use `exec()`, that fixed that.
   
-  It's a little messy for now, but it will continue to progress as I work on it. Feel free to tinker, and download/run! Should be compatible with any operating system that has python 3. Just double-click the finalRunner, and it'll pop up.
+  It's a little messy for now, but it will continue to progress as I work on it. Feel free to tinker, and download/run! Should be compatible with any operating system that has Python 3. Just double-click the finalRunner, and it'll pop up.
