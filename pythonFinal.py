@@ -26,6 +26,10 @@ class Stack(object):
 		return len(self.items)
 
 class CodeFileGenerator(object):
+	"""Creates all the necesary resources to generate a 
+	Python source code file, change the output and inout, 
+	and test batches. Only does addition and subtraction
+	of integers."""
 	def __init__(self, batchSize = 0, given_input = 0, desired_output = 1, max_lines = 25, min_scope = 1, max_scope = 5, tab = '\t', newline = '\n'):
 		self.GIVEN_INPUT = given_input
 		self.DESIRED_OUTPUT = desired_output
@@ -65,6 +69,9 @@ class CodeFileGenerator(object):
 		self.makeResultsFile = False
 
 	def makeDebugFile(self, filename, content):
+		"""This should be used instead of print() because of the dirty
+		way I'm using the exec() built-in function. For debugging 
+		purposes."""
 		if filename in self.debugNames:
 			with open(filename+str(self.batchNumber)+'.txt', 'w+') as f:
 				f.write(content)
@@ -74,7 +81,8 @@ class CodeFileGenerator(object):
 				f.write(content)
 
 	def randVarInScope(self):
-		""" """
+		"""Returns a random variable that exists in the currently
+		open scope for the generated file"""
 		upperBound = len(self.variable_names.peek())-1
 		randomVarIndex = None
 		rint = randint(1,3)
@@ -87,16 +95,18 @@ class CodeFileGenerator(object):
 		return self.variable_names.peek()[randomVarIndex]
 
 	def mkTab(self):
-		""" """
+		"""Generates the correct number of tabs for the scope level."""
 		#self.makeDebugFile('debugTS', 'TabScope: '+str(self.scope_depth)+self.NEWLINE)
 		return self.TAB*self.scope_depth
 		
 	def getValOrVar(self):
-		""" """
+		"""Returns either a random value or a random pre-existing variable"""
 		return self.genConditionalVals()[randint(0, 1)]
 
 	def genConditionalVals(self):
-		""" """
+		"""Returns a tuple containing 1. a random variable in scope, and 
+		2. either another random variable in scope, or a random value based 
+		off of the input and output values"""
 		result1 = self.variable_names.peek()[randint(0, len(self.variable_names.peek())-1)]
 		igr = randint(1, 2)
 		result2 = None
