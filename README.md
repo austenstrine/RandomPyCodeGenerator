@@ -23,4 +23,18 @@ A program that randomly generates Python code, and then filters based on the des
   
   I initially was concerned about the scalability - I couldn't figure out how to get all the processing done in RAM instead of on the disk, but when I discovered that I could use `exec()`, that fixed that.
   
-  It's a little messy for now, but it will continue to progress as I work on it. Feel free to tinker, and download/run! Should be compatible with any operating system that has Python 3. Just double-click the finalRunner, and it'll pop up.
+  It's a little messy for now, but it will continue to progress as I work on it. Feel free to tinker, and download/run! Should be compatible with any operating system that has Python 3. 
+  
+## Running the Program
+### Windows
+  Download .zip and unzip. Double-click the finalRunner, and it'll pop up - just make sure it's not opening it automatically in an IDE.
+### Mac OS
+#### Python Launcher
+  Locate `finalRunner.py`. Right-click it, and open with Python Launcher. It should open immediately.
+#### Terminal method for beginners:
+  Open Terminal. It's in applications>utilities. Issue the `ls` command to display the names of all files/folders in the working directory(current folder). See if the working directory(current folder) contains `finalRunner.py`. If it doesn't, navigate until you get to the correct directory/folder. Use `cd folderName` where `folderName` is the name of the folder in the current directory you would like to navigate to, to open a folder and make it the current working directory. Use `cd ..` to navigate to the parent folder (the folder your current working directory is in) and make that the current working directory. Every time you navigate to a new directory, enter `ls` again to get a list of the files and folders in that directory so you don't get lost.
+  Once you're in the correct working directory, enter `pythonX.Y finalRunner.py` , where `X.Y` is the Python version on your computer. You cannot enter any other numbers than what your installed Python version is. Python 3.3 or higher is required, but 3.5 is recommended.  Once you've entered this command, the program will run!
+#### IDLE method
+  Locate `finalRunner.py`. Right-click it, and open with IDLE. Once idle pops up, press f5 to run.
+  
+If any of these methods do not work, definitely try the others before giving up - Maybe even shoot me a message so I know what's working and what is not.
