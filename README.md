@@ -32,9 +32,30 @@ A program that randomly generates Python code, and then filters based on the des
 #### Python Launcher
   Locate `finalRunner.py`. Right-click it, and open with Python Launcher. It should open immediately.
 #### Terminal method for beginners:
-  Open Terminal. It's in applications>utilities. Issue the `ls` command to display the names of all files/folders in the working directory(current folder). See if the working directory(current folder) contains `finalRunner.py`. If it doesn't, navigate until you get to the correct directory/folder. Use `cd folderName` where `folderName` is the name of the folder in the current directory you would like to navigate to, to open a folder and make it the current working directory. Use `cd ..` to navigate to the parent folder (the folder your current working directory is in) and make that the current working directory. Every time you navigate to a new directory, enter `ls` again to get a list of the files and folders in that directory so you don't get lost.
+  Open Terminal. It's in applications>utilities. Issue the `ls` command to display the names of all files/folders in the working directory(current folder). See if the working directory(current folder) contains `finalRunner.py`. If it doesn't, navigate until you get to the correct directory/folder. Use `cd folderName` to open a folder and make it the current working directory, where `folderName` is the name of the folder in the current directory you would like to navigate to. Use `cd ..` to navigate to the parent folder and make that the current working directory. (The parent folder is the folder your current working directory is in.) Every time you navigate to a new directory, enter `ls` again to get a list of the files and folders in that directory so you don't get lost. If you do get lost, just type in `cd ..` a few times until you see a falder name you recognize as the CWD.
   Once you're in the correct working directory, enter `pythonX.Y finalRunner.py` , where `X.Y` is the Python version on your computer. You cannot enter any other numbers than what your installed Python version is. Python 3.3 or higher is required, but 3.5 is recommended.  Once you've entered this command, the program will run!
+
+Here's a sample of what it would look like when you successfully open the program:
+`Last login: Tue Dec 12 18:32:37 on ttys001
+CSiMac1-40:~ student$ ls
+Applications	Downloads	Music		Sites
+Desktop		Library		Pictures	VirtualBox VMs
+Documents	Movies		Public
+CSiMac1-40:~ student$ cd Downloads
+CSiMac1-40:Downloads student$ ls
+Networking.rtf.docx			RandomPyCodeGenerator-master.zip
+RandomPyCodeGenerator-master
+CSiMac1-40:Downloads student$ cd RandomPyCodeGenerator-master
+CSiMac1-40:RandomPyCodeGenerator-master student$ ls
+GO.py		README.md	finalRunner.py	tester.py
+LICENSE		__pycache__	pythonFinal.py
+CSiMac1-40:RandomPyCodeGenerator-master student$ python --version
+Python 2.7.11
+CSiMac1-40:RandomPyCodeGenerator-master student$ **NOTE, the version it prints ^here^ is a lie because this school computer is weird. If yours is also weird, the open IDLE and go off of the version that IDLE gives**
+-bash: **NOTE,: command not found
+CSiMac1-40:RandomPyCodeGenerator-master student$ python3.5 finalRunner.py
+`
 #### IDLE method
   Locate `finalRunner.py`. Right-click it, and open with IDLE. Once idle pops up, press f5 to run.
   
-If any of these methods do not work, definitely try the others before giving up - Maybe even shoot me a message so I know what's working and what is not.
+##### If any one of these methods do not work, definitely try all the others before giving up. Maybe even shoot me a message so I know what's working and what is not.
