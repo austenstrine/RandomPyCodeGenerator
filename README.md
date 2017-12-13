@@ -36,7 +36,8 @@ A program that randomly generates Python code, and then filters based on the des
   Once you're in the correct working directory, enter `pythonX.Y finalRunner.py` , where `X.Y` is the Python version on your computer. You cannot enter any other numbers than what your installed Python version is. Python 3.3 or higher is required, but 3.5 is recommended.  Once you've entered this command, the program will run!
 
 Here's a sample of what it would look like when you successfully open the program:
-`Last login: Tue Dec 12 18:32:37 on ttys001
+```
+Last login: Tue Dec 12 18:32:37 on ttys001
 CSiMac1-40:~ student$ ls
 Applications	Downloads	Music		Sites
 Desktop		Library		Pictures	VirtualBox VMs
@@ -54,7 +55,8 @@ Python 2.7.11
 CSiMac1-40:RandomPyCodeGenerator-master student$ **NOTE, the version it prints ^here^ is a lie because this school computer is weird. If yours is also weird, the open IDLE and go off of the version that IDLE gives**
 -bash: **NOTE,: command not found
 CSiMac1-40:RandomPyCodeGenerator-master student$ python3.5 finalRunner.py
-`
+```
+  You can now celebrate! You've successfully opened the program! Yaaaayyy...
 #### IDLE method
   Locate `finalRunner.py`. Right-click it, and open with IDLE. Once idle pops up, press f5 to run.
   
